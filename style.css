@@ -1,105 +1,187 @@
-/* Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+/* styles.css */
+
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Fullscreen Sections */
-.container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
 }
 
-.fullscreen-section {
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
+/* Header Section */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Background Images */
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Section 1 */
 #section1 {
-  background-image: url('https://via.placeholder.com/1920x1080/FFA500/FFFFFF?text=Orange+and+Lemon+Tree');
+    background: linear-gradient(45deg, #ff8c00, #ffb347);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
 }
 
-#section2 {
-  background-image: url('https://via.placeholder.com/1920x1080/FF8C00/FFFFFF?text=Orange+Juice+Drop');
+#section1 .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-#section3 {
-  background-image: url('https://via.placeholder.com/1920x1080/008000/FFFFFF?text=Green+Transparent+Bottle');
-}
-
-#section4 {
-  background-image: url('https://via.placeholder.com/1920x1080/006400/FFFFFF?text=Bottle+with+Label');
-}
-
-#section5 {
-  background-image: url('https://via.placeholder.com/1920x1080/228B22/FFFFFF?text=Green+Skull+Character');
-}
-
-/* Black Background for 3D Bottle Section */
-.black-bg {
-  background-color: black;
-}
-
-/* Content Styling */
-.content {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* 3D Bottle Container */
-.bottle-container {
-  perspective: 1000px;
-  margin-bottom: 20px;
-}
-
-.bottle {
-  width: 150px;
-  height: 300px;
-  transform-style: preserve-3d;
-  transition: transform 1s ease;
-}
-
-/* Info Text */
-.info-text {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.step-text {
-  margin: 10px 0;
-  font-size: 1.2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .content {
-    padding: 10px;
+#section1 .content p {
     font-size: 1.2rem;
-  }
+    margin-bottom: 20px;
+}
 
-  .fullscreen-section {
-    background-position: top;
-  }
+#section1 .content button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#section1 .content button:hover {
+    background-color: #ffd700;
+}
+
+/* Section 2 */
+#section2 {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#section2 .product-display img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#section2 .product-display p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Section 3 */
+#section3 {
+    background-color: #eee;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#section3 .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#section3 .feature {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+#section3 .feature h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#section3 .feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Section 4 */
+#section4 {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#section4 .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#section4 .gallery img {
+    margin: 10px;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section 5 */
+#section5 {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#section5 .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#section5 .contact p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
 }
